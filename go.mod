@@ -1,4 +1,4 @@
-module github.com/kitkitchen/mnemo
+module github.com/snburman/mnemo
 
 go 1.21.5
 
