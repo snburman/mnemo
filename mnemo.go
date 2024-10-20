@@ -32,16 +32,13 @@ func (m *Mnemo) WithServer(key string, opts ...Opt[Server]) *Mnemo {
 	if err != nil {
 		NewError[Server](err.Error()).Log()
 	}
-	srv.withNemo(m)
+	srv.withMnemo(m)
 	m.server = srv
 	return m
 }
 
 // Server returns the Mnemo instance's server or panics if the server is nil.
 func (m *Mnemo) Server() *Server {
-	if m.server == nil {
-		NewError[Mnemo]("server is nil").WithLogLevel(Panic).Log()
-	}
 	return m.server
 }
 

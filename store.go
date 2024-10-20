@@ -84,7 +84,6 @@ func UseStore(key StoreKey) (*Store, error) {
 	s, ok := strMgr.stores[key]
 	if !ok {
 		return nil, NewError[Store](fmt.Sprintf("no store with key '%v'", key))
-
 	}
 	return s, nil
 }

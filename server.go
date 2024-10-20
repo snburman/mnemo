@@ -38,7 +38,7 @@ type (
 	}
 )
 
-func (s *Server) withNemo(m *Mnemo) {
+func (s *Server) withMnemo(m *Mnemo) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 	if s.mnemo != nil {
